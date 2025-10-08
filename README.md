@@ -8,3 +8,25 @@ Over time, this process ensures that your most important topics rise to the top 
 
 The original aim was to help choose what to learn next (e.g., a technology, programming language, or framework).
 
+## Installation
+
+```
+curl -o "$HOME/.local/bin/whatsmatter.sh" \
+    -L https://raw.githubusercontent.com/apechinsky/whatsmatter/refs/heads/master/whatsmatter.sh && \
+    chmod +x "$HOME/.local/bin/whatsmatter.sh"
+```
+
+## Usage
+
+
+* Add a term with score 1
+```
+whatsmatter.sh score "term"
+```
+
+* Choose and score term
+```
+whatsmatter.sh
+```
+
+
