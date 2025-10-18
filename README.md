@@ -1,19 +1,33 @@
-# whatsmatter
+# whatmatter
 
+whatmatter - a tool for identifying the most important topics.
+In other wards, what matters to you the most.
+
+The idea is to increment the score of particular topic each time you see it.
+You do your everyday work and realize that something is important.
+You call this script and promote the topic.
+After some time you'll have a list with most important topics on the top.
 whatsmatter is a tool for tracking and scoring important personal topics.
 
-This tool helps you maintain a list of important topics by incrementing a topic's score each time you encounter it.
-Whenever you come across something important in your daily work, you can run the script to promote that topic.
-Over time, this process ensures that your most important topics rise to the top of the list.
+The original aim was to help choose what to learn next (e.g., a technology,
+programming language, or framework).
 
-The original aim was to help choose what to learn next (e.g., a technology, programming language, or framework).
+## Platforms
+
+* Linux
+* MacOS
+
+## Dependencies
+
+* [fzf](https://github.com/junegunn/fzf) - a command-line fuzzy finder.
+* sed - a stream editor for filtering and transforming text.
 
 ## Installation
 
 ```
-curl -o "$HOME/.local/bin/whatsmatter.sh" \
-    -L https://raw.githubusercontent.com/apechinsky/whatsmatter/refs/heads/master/whatsmatter.sh && \
-    chmod +x "$HOME/.local/bin/whatsmatter.sh"
+curl -o "$HOME/.local/bin/whatmatter.sh" \
+    -L https://raw.githubusercontent.com/apechinsky/whatmatter/refs/heads/master/whatmatter.sh && \
+    chmod +x "$HOME/.local/bin/whatmatter.sh"
 ```
 
 ## Usage
@@ -21,12 +35,12 @@ curl -o "$HOME/.local/bin/whatsmatter.sh" \
 
 * Add a term with score 1
 ```
-whatsmatter.sh score "term"
+whatmatter.sh score "term"
 ```
 
 * Choose and score term
 ```
-whatsmatter.sh
+whatmatter.sh
 ```
 
 

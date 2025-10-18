@@ -1,17 +1,18 @@
 #!/bin/bash
 
 #
-# whatsmatter - a tool to track important topics
+# whatmatter - a tool for identifying the most important topics.
+# In other wards, what matters to you the most.
 #
 # The idea is to increment the score of particular topic each time you see it.
 # You do your everyday work and realize that something is important.
 # You call this script and promote the topic.
 # After some time you'll have a list with most important topics on the top.
 #
-# Topic scores a kept in db file (default: $XDG_DATA_HOME/whatsmatter/whatsmatter.txt).
+# Topic scores a kept in db file (default: $XDG_DATA_HOME/whatmatter/whatmatter.txt).
 #
 # Synopsis:
-#   whatsmatter.sh <common-options> <command> <command-specific-parameters-or-common-options>
+#   whatmatter.sh <common-options> <command> <command-specific-parameters-or-common-options>
 #
 # Common options:
 #   --verbose - set verbosity level
@@ -25,12 +26,12 @@
 #         If not provided, a list of existing topics from 'db' files will be shown to choose from.
 #
 #     Examples:
-#       ./whatshmatter.sh score "smart contract"
+#       ./whatmatter.sh score "smart contract"
 #
 #   * list - list all topics with scores
 #
 # Environment variables:
-#   * WHATSMATTER_DB - path to database file (default: $HOME/.config/whatsmatter/whatsmatter.txt)
+#   * WHATMATTER_DB - path to database file (default: $HOME/.config/whatmatter/whatmatter.txt)
 #
 # License: Apache License 2.0
 #
@@ -73,7 +74,7 @@ defineDefaults() {
     name=${basename%.*}
     defaultDb="${dbHome}/${name}/${name}.txt"
 
-    db=${WHATSMATTER_DB:-$defaultDb}
+    db=${WHATMATTER_DB:-$defaultDb}
 }
 
 main() {
@@ -152,7 +153,7 @@ parseCommonArgument() {
 # List all topics with scores
 #
 listCommand() {
-    echo "Whatsmatter db '$db'."
+    echo "whatmatter db '$db'."
 
     if [[ ! -f "$db" ]]; then
         echo "Db '$db' does not exist."
